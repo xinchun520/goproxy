@@ -4,5 +4,5 @@ proxy
 !.none
 .*
 release-*
-proxy.crt
-proxy.key
+#proxy.crt
+#proxy.key

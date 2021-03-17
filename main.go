@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 	"os/signal"
-	"proxy/services"
+	. "proxy/services"
 	"syscall"
 )
 
@@ -18,7 +18,7 @@ func main() {
 	}
 	Clean(&service.S)
 }
-func Clean(s *services.Service) {
+func Clean(s *Service) {
 	signalChan := make(chan os.Signal, 1)
 	cleanupDone := make(chan bool)
 	signal.Notify(signalChan,
